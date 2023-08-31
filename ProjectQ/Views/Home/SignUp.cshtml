@@ -1,0 +1,72 @@
+﻿ @{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+@model KhachHang
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bootstrap 4 sign up form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="~/Account/SignUp.css">
+  @Html.Partial("_MenuPartialView")
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="row justify-content-center">
+  <div class="col-md-5">
+   <div class="card">
+     <h2 class="card-title text-center">Register </a></h2>
+      <div class="card-body py-md-4">
+       @*<form _lpchecked="1">
+           @Html.ValidationSummary(false,"",new {@class="text-danger"})
+                
+          <div class="form-group">
+             <input type="text" class="form-control" id="Name" placeholder="Name"> 
+             @Html.ValidationMessageFor(m=>m.HoVaTen,"",new {@class="text-danger"})
+        </div>
+        <div class="form-group">
+             <input type="email" class="form-control" id="Email" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+     <input type="tel" class="form-control" id="PhoneNumber" placeholder="Phone Number">
+   </div>
+                            
+                          
+   <div class="form-group">
+     <input type="password" class="form-control" id="Password" placeholder="Password">
+   </div>
+   <div class="form-group">
+      <input type="password" class="form-control" id="Confirm-Password" placeholder="Confirm-Password">
+   </div>
+   <div class="d-flex flex-row align-items-center justify-content-between">
+      
+           <input type="submit" value="Register" id="submit">
+          </div>
+       </form>*@
+          @using (Html.BeginForm("SignUp","Home",FormMethod.Post))
+            {
+                @Html.ValidationSummary(false,"",new {@class="text-danger"})
+                
+             <span>Enter Your Name:</span> @Html.TextBoxFor(m => m.Id) <br />
+            @Html.ValidationMessageFor(m=>m.HoVaTen,"",new {@class="text-danger"}) <br />
+
+            <span>Enter Your Phone Number:</span> @Html.TextBoxFor(m => m.SoDienThoai) <br />
+            @Html.ValidationMessageFor(m=>m.SoDienThoai,"",new {@class="text-danger"}) <br />
+            <span>Enter Your Email:</span> @Html.TextBoxFor(m => m.Email) <br />
+            @Html.ValidationMessageFor(m=>m.Email,"",new {@class="text-danger"}) <br />
+            <br />   
+
+            <input type="submit" value="Send" id="submit">
+            }
+     </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

@@ -1,0 +1,79 @@
+﻿@{
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Store Location </title>
+
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+h2{
+    text-align: center;
+}
+</style>
+@Html.Partial("_MenuPartialView")
+</head>
+<body>
+    
+    <h2> Store Locations List</h2>
+
+<table>
+  <tr>
+    <th> STT </th>
+    <th> Địa chỉ </th>
+    
+  </tr>
+  <tr>
+    <td> 1 </td>
+    <td> 1 Quang Trung, Quận 12, TPHCM </td>
+    
+  </tr>
+  <tr>
+    <td> 2 </td>
+    <td> 1 Phạm Thế Hiển, Quận 8, TPHCM</td>
+    
+  </tr>
+  <tr>
+    <td> 3 </td>
+    <td> 1 Nguyễn Trãi, Quận 5, TPHCM </td>
+    
+  </tr>
+  <tr>
+    <td> 4 </td>
+    <td> 1 Nguyễn Trãi, Quận 1, TPHCM </td>
+    
+  </tr>
+  <tr>
+    <td> 5 </td>
+    <td> 1 Điện Biên Phủ, Quận 3, TPHCM </td>
+   
+  </tr>
+  <tr>
+    <td> 6 </td>
+    <td> 1 Ngô Quyền, Quận 5, TPHCM</td>
+   
+  </tr>
+</table>
+
+</body>
+</html>
